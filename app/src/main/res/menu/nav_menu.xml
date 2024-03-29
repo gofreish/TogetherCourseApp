@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/house_icon"
+            android:title="Acceuil" />
+        <item android:id="@+id/nav_user"
+            android:icon="@drawable/user_solid"
+            android:title="Mon compte" />
+        <item android:id="@+id/nav_chat"
+            android:icon="@drawable/signal_messenger_icon"
+            android:title="Chat" />
+        <item android:id="@+id/nav_setting"
+            android:icon="@drawable/setting_icon"
+            android:title="Paramètre" />
+    </group>
+    <item android:title="">
+        <menu>
+            <item android:id="@+id/nav_logout"
+                android:icon="@drawable/log_out_icon"
+                android:title="Se Déconnecte"/>
+            <item android:id="@+id/nav_desactivate"
+                android:icon="@drawable/baseline_close_24"
+                android:title="@string/text_desactiver"/>
+        </menu>
+    </item>
+
+</menu>

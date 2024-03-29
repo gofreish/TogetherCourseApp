@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_header_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/text_edit_accoutn"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/edit_account_image_view"
+            android:layout_width="159dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="@color/card_color"
+            android:text="@string/text_choisir"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/edit_account_image_view"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/edit_account_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/edit_account_image_view" />
+
+        <EditText
+            android:id="@+id/edit_account_username"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:elevation="20dp"
+            android:ems="10"
+            android:hint="@string/text_username"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="665dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_edit_profile"
+            app:layout_constraintStart_toStartOf="@+id/btn_edit_profile"
+            app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile"/>
+
+        <EditText
+            android:id="@+id/edit_account_email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableLeft="@drawable/email_icon"
+            android:elevation="20dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/edit_account_username"
+            app:layout_constraintStart_toStartOf="@+id/edit_account_username"
+            app:layout_constraintTop_toBottomOf="@+id/edit_account_username" />
+
+        <EditText
+            android:id="@+id/edit_account_password"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableLeft="@drawable/key"
+            android:elevation="20dp"
+            android:ems="10"
+            android:hint="Ancien Mot de passe"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/edit_account_email"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edit_account_email"
+            app:layout_constraintTop_toBottomOf="@+id/edit_account_email" />
+
+        <EditText
+            android:id="@+id/edit_account_new_password"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableLeft="@drawable/key"
+            android:elevation="20dp"
+            android:ems="10"
+            android:hint="Nouveau mot de passe"
+            android:inputType="textPassword"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/edit_account_password"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edit_account_password"
+            app:layout_constraintTop_toBottomOf="@+id/edit_account_password" />
+
+        <ProgressBar
+            android:id="@+id/editAccountProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="88dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toEndOf="@+id/editAccountBtn" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editAccountBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="@color/blue_color"
+            android:paddingHorizontal="10dp"
+            android:text="@string/text_s_enregistrer"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edit_account_email"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/edit_account_email"
+            app:layout_constraintTop_toBottomOf="@+id/edit_account_email" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
