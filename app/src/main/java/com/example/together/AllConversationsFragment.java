@@ -59,20 +59,20 @@ public class AllConversationsFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-/*
+
+        allUsers.add(new User("aaa", "Test user 1", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
+        allUsers.add(new User("Olive@gmail.com", "Zoungrana Olive", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
+        allUsers.add(new User("Sango Appo@gmail.com", "Test user 1", "Appolinaire", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
         allUsers.add(new User("aaa", "Test user 1", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
         allUsers.add(new User("aaa", "Test user 1", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
         allUsers.add(new User("aaa", "Test user 1", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
-        allUsers.add(new User("aaa", "Test user 1", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
-        allUsers.add(new User("aaa", "Test user 1", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
-        allUsers.add(new User("aaa", "Test user 1", "Email@email.com", "https://firebasestorage.googleapis.com/v0/b/together-702dc.appspot.com/o/images%2Fimages%2Fced4a498-524f-4410-8f62-29269f17988a.jpg?alt=media&token=dcc766fc-8c49-46b6-aeb5-afec08493ad2"));
-*/
         UserListExecutor allUsersGetted = new UserListExecutor() {
             @Override
             public void executor(List<User> users) {
-                allUsers = users;
+                //allUsers = users;
+                int begin = allUsers.size();
                 allUsers.addAll(users);
-                conversationAdapter.notifyItemRangeInserted(0, allUsers.size());
+                conversationAdapter.notifyItemRangeInserted(begin, allUsers.size());
             }
         };
         UserListExecutor getAllUsersFail = new UserListExecutor() {

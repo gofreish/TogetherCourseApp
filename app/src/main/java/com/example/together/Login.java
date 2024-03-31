@@ -90,10 +90,10 @@ public class Login extends AppCompatActivity {
         Executor onLoginFail = new Executor() {
             @Override
             public void execute() {
+                Toast.makeText(Login.this, "Email ou mot de passe incorrecte.",
+                        Toast.LENGTH_LONG).show();
                 loginProgressBar.setVisibility(View.GONE);
                 loginButton.setEnabled(true);
-                Toast.makeText(Login.this, "Email ou mot de passe incorrecte.",
-                        Toast.LENGTH_SHORT).show();
             }
         };
 
